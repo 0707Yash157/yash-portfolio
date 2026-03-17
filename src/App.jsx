@@ -175,15 +175,25 @@ function App() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-10 text-center">
-        <h3 className="text-2xl font-semibold mb-4">Contact</h3>
+      <section id="contact" className="py-20 text-center">
+        <h3 className="text-3xl font-semibold mb-6">Let’s Connect</h3>
 
-        <p className="text-gray-400 mb-4">yashporwal494@gmail.com</p>
+        <p className="text-gray-400 mb-6">
+          yashporwal494@gmail.com
+        </p>
 
         <div className="flex justify-center gap-6">
-          <Github className="hover:scale-110 transition" />
-          <Linkedin className="hover:scale-110 transition" />
-          <Mail className="hover:scale-110 transition" />
+          <a href="https://github.com/0707Yash157">
+            <Github />
+          </a>
+
+          <a href="https://www.linkedin.com/in/yashporwal157/">
+            <Linkedin />
+          </a>
+
+          <a href="mailto:yashporwal494@gmail.com">
+            <Mail />
+          </a>
         </div>
       </section>
 
