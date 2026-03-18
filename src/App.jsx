@@ -130,49 +130,102 @@ function App() {
 
       {/* Certificates (UPDATED WITH DRIVE LINK) */}
       <section className="py-10">
-        <h3 className="text-2xl font-semibold mb-4">Certificates</h3>
+  <h3 className="text-2xl font-semibold mb-6 text-center">Certificates</h3>
 
-        <ul className="list-disc ml-5 text-gray-300 space-y-2">
-          {[
-            "Privacy & Security – NPTEL",
-            "Computational Theory – Infosys",
-            "Wireless Tech for IoT – NASSCOM",
-            "Mastering C – CSE Pathshala",
-            "Code-A-Hunt – CodingBlocks"
-          ].map((cert, i) => (
-            <li key={i}>
-              <a
-                href="https://drive.google.com/drive/folders/1FJZfb6q-d0grdJLXsE89vwlZqgcU0NYm"
-                target="_blank"
-                className="hover:text-blue-400 transition"
-              >
-                {cert}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
+  <div className="grid md:grid-cols-2 gap-6">
+
+    {[
+      "Privacy & Security – NPTEL",
+      "Computational Theory – Infosys",
+      "Wireless Tech for IoT – NASSCOM",
+      "Mastering C – CSE Pathshala",
+      "Code-A-Hunt – CodingBlocks"
+    ].map((cert, i) => (
+      <motion.div
+        key={i}
+        whileHover={{ scale: 1.05 }}
+        className="bg-gray-900 p-6 rounded-xl shadow-xl"
+      >
+        <h4 className="font-semibold">{cert}</h4>
+
+        <a
+          href="https://drive.google.com/drive/folders/1FJZfb6q-d0grdJLXsE89vwlZqgcU0NYm"
+          target="_blank"
+          className="text-blue-400 text-sm mt-2 inline-flex items-center gap-1"
+        >
+          View Certificate
+        </a>
+      </motion.div>
+    ))}
+
+  </div>
+</section>
 
       {/* Achievements */}
       <section className="py-10">
-        <h3 className="text-2xl font-semibold mb-4">Achievements</h3>
+  <h3 className="text-2xl font-semibold mb-6 text-center">Achievements</h3>
 
-        <ul className="list-disc ml-5 text-gray-300 space-y-2">
-          <li>A Grade in Advanced Data Structures</li>
-          <li>Man of the Series – Inter-District T20</li>
-        </ul>
-      </section>
+  <div className="grid md:grid-cols-2 gap-6">
+
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="bg-gray-200 dark:bg-gray-900 p-6 rounded-xl shadow-xl"
+    >
+      <h4 className="font-semibold">
+        Advanced Data Structures Course
+      </h4>
+      <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+        Lovely Professional University
+      </p>
+      <p className="text-sm mt-2">
+        Earned <span className="text-green-500 font-medium">A Grade</span>
+      </p>
+    </motion.div>
+
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="bg-gray-200 dark:bg-gray-900 p-6 rounded-xl shadow-xl"
+    >
+      <h4 className="font-semibold">
+        Inter-District T20 Cricket Tournament
+      </h4>
+      <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+        Sports Achievement
+      </p>
+      <p className="text-sm mt-2">
+        Awarded <span className="text-green-500 font-medium">Man of the Series</span>
+      </p>
+    </motion.div>
+
+  </div>
+</section>
 
       {/* Education */}
       <section className="py-10">
-        <h3 className="text-2xl font-semibold mb-4">Education</h3>
+  <h3 className="text-2xl font-semibold mb-6 text-center">Education</h3>
 
-        <div className="text-gray-300 space-y-3">
-          <p><b>Lovely Professional University</b><br/>B.Tech CSE | CGPA: 6.53</p>
-          <p><b>ST. Francis Academy</b><br/>Intermediate: 70%</p>
-          <p><b>ST. Francis Academy</b><br/>Matriculation: 71%</p>
-        </div>
-      </section>
+  <div className="grid md:grid-cols-3 gap-6">
+
+    <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-900 p-6 rounded-xl shadow-xl">
+      <h4 className="font-semibold">Lovely Professional University</h4>
+      <p className="text-gray-400 text-sm mt-1">B.Tech CSE</p>
+      <p className="text-sm mt-2">CGPA: 6.53</p>
+    </motion.div>
+
+    <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-900 p-6 rounded-xl shadow-xl">
+      <h4 className="font-semibold">ST. Francis Academy</h4>
+      <p className="text-gray-400 text-sm mt-1">Intermediate</p>
+      <p className="text-sm mt-2">70%</p>
+    </motion.div>
+
+    <motion.div whileHover={{ scale: 1.05 }} className="bg-gray-900 p-6 rounded-xl shadow-xl">
+      <h4 className="font-semibold">ST. Francis Academy</h4>
+      <p className="text-gray-400 text-sm mt-1">Matriculation</p>
+      <p className="text-sm mt-2">71%</p>
+    </motion.div>
+
+  </div>
+</section>
 
       {/* Contact */}
       <section id="contact" className="py-20 text-center">
